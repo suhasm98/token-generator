@@ -1,0 +1,38 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfcfcf #ffffff00;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #cfcfcf;
+  border-radius: 20px;
+  border: 4px solid #ffa50000;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ButtonContainer {
+  display: flex;
+  height: 100px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.MainContainer {
+  width: 100vw;
+  display: flex;
+}

@@ -1,0 +1,25 @@
+.TokenContainer {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+  }
+  .TokenRowContainer {
+    display: flex;
+    padding: 5px;
+    margin-top: 10px;
+    overflow-x: auto;
+    min-height: 150px;
+  }
+  .BodyContainer {
+    max-width: 50vw;
+  }
+  .InputContainer {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+    width: 50vw;
+    align-items: center;
+  }
+  
