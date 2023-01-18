@@ -1,3 +1,3 @@
-import TokenContainer from "./TokenContainer";
+import TokenContainer from './TokenContainer'
 
-export { TokenContainer };
+export { TokenContainer }

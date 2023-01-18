@@ -1,49 +1,50 @@
-import { useState } from "react";
-import Button from "@mui/material/Button";
-import { TokenContainer } from "./TokenContainer";
-import generateTokens from "./helperFunctions";
-import "./App.css";
+import { useState } from 'react'
+import Button from '@mui/material/Button'
+
+import { TokenContainer } from './TokenContainer'
+import generateTokens from './helperFunctions'
+import './App.css'
 
 export default function App() {
-  const [noBlueOfTokens, setBlueNoOfTokens] = useState(0);
-  const [blueTokensPerRow, setBlueTokensPerRow] = useState(0);
-  const [blueTokenPrefix, setBlueTokenPrefix] = useState("");
-  const [noRedOfTokens, setRedNoOfTokens] = useState(0);
-  const [redTokensPerRow, setRedTokensPerRow] = useState(0);
-  const [redTokenPrefix, setRedTokenPrefix] = useState("");
-  const [blueTokenArray, setBlueTokenArray] = useState([]);
-  const [redTokenArray, setRedTokenArray] = useState([]);
+  const [noBlueOfTokens, setBlueNoOfTokens] = useState(1)
+  const [blueTokensPerRow, setBlueTokensPerRow] = useState(1)
+  const [blueTokenPrefix, setBlueTokenPrefix] = useState('')
+  const [noRedOfTokens, setRedNoOfTokens] = useState(1)
+  const [redTokensPerRow, setRedTokensPerRow] = useState(1)
+  const [redTokenPrefix, setRedTokenPrefix] = useState('')
+  const [blueTokenArray, setBlueTokenArray] = useState([])
+  const [redTokenArray, setRedTokenArray] = useState([])
 
   const handleOnGenerateClick = () => {
-    setBlueTokenArray([...generateTokens(noBlueOfTokens, blueTokensPerRow)]);
-    setRedTokenArray([...generateTokens(noRedOfTokens, redTokensPerRow)]);
-  };
+    setBlueTokenArray([...generateTokens(noBlueOfTokens, blueTokensPerRow)])
+    setRedTokenArray([...generateTokens(noRedOfTokens, redTokensPerRow)])
+  }
 
   const handleOnClearClick = () => {
-    setBlueNoOfTokens(0);
-    setBlueTokensPerRow(0);
-    setBlueTokenPrefix("");
-    setRedNoOfTokens(0);
-    setRedTokensPerRow(0);
-    setRedTokenPrefix("");
-    setBlueTokenArray([]);
-    setRedTokenArray([]);
-  };
+    setBlueNoOfTokens(1)
+    setBlueTokensPerRow(1)
+    setBlueTokenPrefix('')
+    setRedNoOfTokens(1)
+    setRedTokensPerRow(1)
+    setRedTokenPrefix('')
+    setBlueTokenArray([])
+    setRedTokenArray([])
+  }
 
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Token Generator Application</h1>
-      <div className="ButtonContainer">
-        <Button variant="contained" onClick={handleOnGenerateClick}>
+      <div className='ButtonContainer'>
+        <Button variant='contained' onClick={handleOnGenerateClick}>
           Generate Token
         </Button>
-        <Button variant="contained" onClick={handleOnClearClick}>
+        <Button variant='contained' onClick={handleOnClearClick}>
           Clear
         </Button>
       </div>
-      <div className="MainContainer">
+      <div className='MainContainer'>
         <TokenContainer
-          color="Red"
+          color='Red'
           tokens={noRedOfTokens}
           tokenArray={redTokenArray}
           tokensPerRow={redTokensPerRow}
@@ -53,7 +54,7 @@ export default function App() {
           setTokenPrefix={setRedTokenPrefix}
         />
         <TokenContainer
-          color="Blue"
+          color='Blue'
           tokens={noBlueOfTokens}
           tokenArray={blueTokenArray}
           tokensPerRow={blueTokensPerRow}
@@ -64,5 +65,5 @@ export default function App() {
         />
       </div>
     </div>
-  );
+  )
 }
