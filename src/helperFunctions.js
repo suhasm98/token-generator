@@ -1,5 +1,5 @@
 const generateTokens = (numberOfTokens, tokensPerRow) => {
-  let numberOfRows = Math.ceil(10 / tokensPerRow)
+  let numberOfRows = Math.ceil(numberOfTokens / tokensPerRow)
   let outputTokensArray = []
   let tokenCount = 0
 
