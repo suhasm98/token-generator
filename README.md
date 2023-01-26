@@ -41,3 +41,6 @@ accordingly.
 accordingly.
 7. Provide a better-looking UI by using materia UI. Improvise the look and feel of UI as you find
 appropriate.
+
+![screenshot-localhost_3000-2023 01 26-20_51_25](https://user-images.githubusercontent.com/120901971/214875099-5dd58a01-45fc-4aa3-b935-86c74780cc1c.png)
+
